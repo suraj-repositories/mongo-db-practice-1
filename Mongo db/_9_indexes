@@ -1,0 +1,29 @@
+
+Indexes : it will speed up the search process
+	  it takes more memory and slow down the insertion deletion and updation 
+	  when we use indexes the database work like a B-tree
+	  use indexes where you need lot of searching not lot of updating
+
+
+db.students.find({name: "Shubham"}).explain("executionStats");		
+# this will give the execution stats you can use this to gain data about search
+# in the above example we examined five docs due to lenear search given on docsExamined: 5
+
+
+db.students.createIndex({name: 1})	# to create indexes(1 for alphbetical order -1 for reverse alphbetical order)
+
+
+db.students.find({name: "Shubham"}).explain("executionStats");
+# in the above example we examined only one doc due to lenear search given on docsExamined: 1
+
+
+db.students.getIndexes()	# to see indexes (_id_ index is default)
+ 
+db.students.dropIndex("name_1")	# to drop the index pass the index name
+
+
+db.students.getIndexes()	# to see indexes remaining
+
+	
+	
+	

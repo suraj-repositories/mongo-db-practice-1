@@ -1,0 +1,16 @@
+
+### Logical Operator : Logical operators return data based on expressions that evaluate to true or false.
+# $and 	
+# $not
+# $nor
+# $or
+
+db.students.find({$and:[{fullTime:true},{age:{$lte:22}}]})	# fulltime=true AND age<=22
+
+db.students.find({$or:[{fullTime:true},{age:{$lte:20}}]})	# atleast one condition is true
+
+db.students.find({$nor:[{fullTime:true},{age:{$lte:20}}]})	# if the both conditions are false
+
+db.students.find({age:{$not:{$gt:20}}})		# it also return the element who have null value
+	
+

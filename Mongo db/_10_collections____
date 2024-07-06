@@ -1,0 +1,20 @@
+
+
+show collections;
+
+
+db.createCollection("teachers", {capped: true, size:1000000, max:100}, {autoIndexId:false});
+	# this will create a collection with some parameters or specifications
+	# capped : tell's mongodb to your collection have maximum size limit
+	# size : it will set the max size of collection in bytes 
+	# max : it is the number of max documents that may come on collection
+	# autoIndexId : it is a seperate argument it either be true or false, it ask you to you want to keep he default _id_ index or not if yes make it true(default) otherwise false
+
+show collections;
+
+db.students.drop();	# this will drop the collection
+
+
+
+
+

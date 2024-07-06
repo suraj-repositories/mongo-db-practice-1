@@ -1,0 +1,22 @@
+
+### .deleteOne()
+
+db.students.deleteOne({name:"Shubham"});	# to delete any specific document
+
+
+
+
+
+
+
+
+
+### .deleteMany()
+
+db.students.deleteMany({fullTime:true})	# to delete multiple documents 
+
+db.students.deleteMany({registerDate:{$exists:false}});	# if any document don't have registerDate field delete that document
+
+
+
+

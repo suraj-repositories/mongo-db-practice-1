@@ -1,0 +1,37 @@
+> show dbs;
+
+ use school;
+
+db.createCollection("students");
+
+ show dbs;
+
+
+db.students.insertOne({name:"Shubham",age:21,gpa:1.2}) # to insert data in the collection 
+
+
+db.students.find();   # to show what the data is inserted
+
+
+db.students.insertMany([{name:"Arvind",age:20,gpa:1.3}, {name:"Adarsh", age:19,gpa:2.1}]);   # insert multiple documets at a time
+
+
+db.students.find();   # to show what the data is inserted
+
+
+# ---------------------------------- data types in mongoDB ------------------------------------
+
+ db.students.insertOne({name:"Ajay",
+ 			age:32,
+ 			gpa:2.8,
+ 			fullTime:false,
+ 			regishterDate:new Date(),
+ 			gradutionDate:null,
+ 			courses:["Physics","Chemistry","Math"],
+ 			address: {street:"123 fake",
+ 				  city:"Kanpur",
+ 				  zip:208020}
+ 			})
+
+db.students.find();   # to show what the document is inserted
+

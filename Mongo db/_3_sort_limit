@@ -1,0 +1,20 @@
+
+db.students.find().sort({name:1})	# to sort in alphabatical order
+
+db.students.find().sort({name:-1})	# to sort in reverse alphabetical order
+
+db.students.find().sort({gpa:1})	# to sort in accending order
+
+db.students.find().sort({gpa:-1})	# decending order
+
+
+# ------------- limit --------------
+
+db.students.find().limit(1) # you can limit the number of documents to be returned
+
+db.students.find().sort({gpa: -1}).limit(1)	# it will return the topper of the class
+
+db.students.find().sort({gpa: 1}).limit(1)	# it will return the student who have worst marks in the class
+
+
+

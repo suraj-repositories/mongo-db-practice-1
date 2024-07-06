@@ -1,0 +1,14 @@
+show dbs;
+
+use admin;
+
+use school; 	# to create database
+
+db.createCollection("students")	# to create collection 
+
+show dbs;
+
+db.dropDatabase(); # to drop the database
+
+
+

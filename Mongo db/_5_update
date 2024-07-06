@@ -1,0 +1,38 @@
+
+### .updateOne(filter,update)	****************************************************************************
+
+db.students.updateOne({name:"Shubham"},{$set:{fullTime:true}})		# to set any value on document
+
+db.students.find({name:"Shubham"})
+
+
+db.students.updateOne({_id: ObjectId("65417ec5d161661e6ee9a0de")},{$set:{fullTime:false}})	# if you are using large data set names may be same in that case you have to use the unique id of each document
+
+
+db.students.find({_id: ObjectId("65417ec5d161661e6ee9a0de")})
+
+# -------------------- delete the field ---------------
+
+db.students.updateOne({_id: ObjectId("65417ec5d161661e6ee9a0de")},{$unset:{fullTime:""}})	# use unset operator to delete the field
+
+
+db.students.find({_id: ObjectId("65417ec5d161661e6ee9a0de")})
+
+
+### .updateMany(filter,update)****************************************************************************
+
+db.students.updateMany({},{$set:{fullTime:true}})	# here we are adding fulltime field to all students and making it to true
+
+db.students.updateOne({name:"Shubham"},{$unset:{fullTime:""}})
+db.students.updateOne({name:"Arvind"},{$unset:{fullTime:""}})		# unsetting values 
+
+db.students.find();
+
+
+db.students.updateMany({fullTime:{$exists:false}}, {$set:{fullTime:false}})	# setting the value who don't have value of fulltime
+
+
+
+
+
+

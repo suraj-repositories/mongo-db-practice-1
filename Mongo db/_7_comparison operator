@@ -1,0 +1,31 @@
+
+# Comparison operator : Comparison operator return data based on value comparison
+
+
+db.students.find({name:{$ne:"Arvind"}})	# to find other's which name is not equal's to Arvind(ne : not equal)
+
+
+db.students.find({age: {$lt:20}})	# find whose age is less then 20 (lt - less then)
+
+db.students.find({age:{$lte:19}})	# find whose age is less than equel's to 19 (lte - less then equals)
+
+db.students.find({age:{$gt:21}})	# greater then
+
+db.students.find({age:{$gte:21}})	# greater than or equals to 
+
+		
+# useing more than one comparison operator
+
+db.students.find({gpa:{$gte:2, $lte:3}})	# find whose gpa is in between 2 and 3
+
+
+### --------------------------------- in comparison operator ------------------------------------
+
+db.students.find({name:{$in:["Shubham","Adarsh","Arvind"]}})	# to find document who have these names
+
+### --------------------------------- in comparison operator ------------------------------------
+
+db.students.find({name:{$nin:["Shubham","Adarsh","Arvind"]}})	# to find document who not have these names
+
+
+

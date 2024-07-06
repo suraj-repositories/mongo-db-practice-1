@@ -1,0 +1,59 @@
+[{
+  "_id": {
+    "$oid": "65417ec5d161661e6ee9a0de"
+  },
+  "name": "Shubham",
+  "age": 21,
+  "gpa": 1.2,
+  "fullTime": false
+},
+{
+  "_id": {
+    "$oid": "65418168d161661e6ee9a0df"
+  },
+  "name": "Arvind",
+  "age": 20,
+  "gpa": 1.3,
+  "fullTime": false
+},
+{
+  "_id": {
+    "$oid": "65418168d161661e6ee9a0e0"
+  },
+  "name": "Adarsh",
+  "age": 19,
+  "gpa": 2.1,
+  "fullTime": true
+},
+{
+  "_id": {
+    "$oid": "654182deadcd7fc5d7fae7f3"
+  },
+  "name": "Yogesh",
+  "age": 22,
+  "gpa": 2.2,
+  "fullTime": true
+},
+{
+  "_id": {
+    "$oid": "6541860b0344c752c4803293"
+  },
+  "name": "Ajay",
+  "age": 32,
+  "gpa": 2.8,
+  "fullTime": true,
+  "regishterDate": {
+    "$date": "2023-10-31T22:56:11.806Z"
+  },
+  "gradutionDate": null,
+  "courses": [
+    "Physics",
+    "Chemistry",
+    "Math"
+  ],
+  "address": {
+    "street": "123 fake",
+    "city": "Kanpur",
+    "zip": 208020
+  }
+}]

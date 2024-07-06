@@ -1,0 +1,28 @@
+
+### .find({query},{projection})
+
+db.students.find({name:"Shubham"})	# find specific person
+
+db.students.find({gpa:1.2})		# find using gpa
+
+db.students.find({name:"Shubham",gpa:1.2})	# you can use both conditions
+
+
+#------------------- projection parameter -----------------------------
+
+db.students.find({},{name:true})	# to fetch only the names (if you make the query parameter empty it will return all documents)
+
+
+db.students.find({},{name:1})		# you can use both true/false or 0/1
+
+
+
+db.students.find({},{_id:false, name:true, gpa:true}) 		# to see one or more values to be return on each document
+
+
+
+
+
+
+
+
